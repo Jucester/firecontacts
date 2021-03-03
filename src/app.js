@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const hbs = require('express-handlebars');
 const path = require('path');
+require('dotenv').config();
 
 const app = express();
 
