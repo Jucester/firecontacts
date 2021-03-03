@@ -31,5 +31,11 @@ controller.addContact = (req, res) => {
     res.redirect('/');
 }
 
+controller.deleteContact = (req, res) => {
+    const id = req.params.id;
+    db.ref('contacts/' + id).remove();
+    res.redirect('/')
+}
+
 
 module.exports = controller;
